@@ -1,0 +1,35 @@
+.form-upload {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px 0;
+  }
+
+  .form-upload label {
+    height: 35px;
+    width: 100px;
+    border: none;
+    border-radius: 5px;
+    background: #f1c40f;
+    color: #333;
+    transition: 0.3s;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .form-upload label:hover {
+    opacity: 0.7;
+  }
+
+  .form-upload label .file-upload {
+    position: absolute;
+    left: -9999px;
+  }
+
+  .form-upload p {
+    margin:auto 20px;
+    font-size: 1rem;
+  }

@@ -1,0 +1,59 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  {% block 'links-head' %} {% endblock %}
+
+
+  <link rel="stylesheet" href="{% static 'base/css/base.css' %}">
+  <link rel="stylesheet" href="{% static 'base/css/reset.css' %}">
+
+  <title> {% block 'title' %} {% endblock %}</title>
+</head>
+
+<body>
+  <nav class="navbar">
+    <ul class="navbar__menu">
+      <li class="navbar__item">
+        <a href="{% url 'seletivehome' %}" class="navbar__link">
+          <img src="{% static 'appseletive/img/dashboard.png' %}" width="45px" alt="">
+          <span>Dashboard</span></a>
+      </li>
+      <div class="menu__opcoes">
+        <li class="navbar__item">
+          <a href="{% url 'nova_empresa' %}" class="navbar__link">
+            <img src="{% static 'appseletive/img/add-empresa.png' %}" width="45px" alt="">
+            <span>Adicionar Empresa</span></a>
+        </li>
+        <li class="navbar__item">
+          <a href="#" class="navbar__link">
+            <img src="{% static 'appseletive/img/página.png' %}" width="45px" alt="">
+            <span>Página 02</span></a>
+        </li>
+      </div>
+      <li class="navbar__item">
+        <a href="#" class="navbar__link">
+          <img src="{% static 'appseletive/img/logout.png' %}" width="45px" alt="">
+          <span>Logout</span></a>
+      </li>
+    </ul>
+  </nav>
+  <section class="main-content">
+    {% block 'body' %}
+    <h2>conteúdo do site</h2>
+
+    {% endblock %}
+  </section>
+  <!-- <script src="menuLateral.js"></script> -->
+  {% block 'script-js' %}
+  
+  {% endblock %}
+</body>
+
+</html>
+
+<!-- --------- -->

@@ -21,13 +21,14 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-oynvq^sw4wu_r7ca90pl@sr-*r-vh0b0-xt!$w9mwy!*fgk^98'
+SECRET_KEY = 'django-insecure-$cla7q1yppv48#a98^!sf#wsa07i7=9-+1ddia)!a%(sz_pp2)'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
 # ALLOWED_HOSTS = []
 ALLOWED_HOSTS = ['.vercel.app', '.now.sh']
+
 
 # Application definition
 
@@ -38,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'core',
     'appsite',
 ]
 
@@ -74,6 +76,17 @@ WSGI_APPLICATION = 'core.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#         'HOST': 'db.lbunxhzgduitviucgjwp.supabase.co',
+#         'NAME': 'postgres',
+#         'USER': 'postgres',
+#         'PASSWORD': '3rIEEZTroIQ5v6Ia',
+#         'PORT': '5432',
+#     }
+# }
 
 # DATABASES = {
 #     'default': {
@@ -123,7 +136,6 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media'), # testar na vercel
 MEDIA_URL = '/media/' # testar na vercel
-
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
