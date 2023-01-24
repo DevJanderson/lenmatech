@@ -6,326 +6,477 @@
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>home</title>
-
-   <!-- font awesome cdn link  -->
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-
-   <!-- swiper css link  -->
-   <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
-
    <!-- custom css file link  -->
    <link rel="stylesheet" href="{% static 'appsite/css/appsite.css' %}">
 
+   <script src="https://cdn.tailwindcss.com"></script>
+   <!--Replace with your tailwind.css once created-->
+
+   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet">
+
+   <!-- Define your gradient here - use online tools to find a gradient matching your branding-->
+   <style>
+       .gradient {
+           background: linear-gradient(90deg, #63d3ff 0%, #9de0ad 100%);
+           /* #f7a48b */
+       }
+   </style>
+
 </head>
-<body>
-   
-<!-- header section starts  -->
 
-<header class="header">
+<body class="leading-normal tracking-normal  gradient" style="font-family: 'Source Sans Pro', sans-serif;">
 
-   <a href="#" class="logo"> 
-      <!-- <i class="fas fa-lightbulb"></i>  -->
-      UNIUTEC
-    </a>
+   <!--Nav-->
+   <nav id="header" class="fixed w-full z-30 top-0  bg-white">
 
-   <nav class="navbar">
-      <div id="close-navbar" class="fas fa-times"></div>
-      <a href="home.html">Íncio</a>
-      <a href="about.html">Sobre</a>
-      <a href="courses.html">cursos</a>
-      <a href="contact.html">contatos</a>
+       <div class="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 py-2 ">
+
+           <div class="pl-4 flex items-center">
+               <a class="toggleColour  no-underline hover:no-underline font-bold text-2xl lg:text-4xl flex items-center gap-4"
+                   href="#">
+                   <img src="{% static 'appsite/img/icons8-literatura-64.png' %}" alt="" width="40">
+                   <p class="text-lx pt-3 text-black">uniutec</p>
+               </a>
+           </div>
+
+           <div class="block lg:hidden pr-4">
+               <button id="nav-toggle"
+                   class="flex items-center px-3 py-2 border rounded text-gray-500 border-gray-600 hover:text-gray-800 hover:border-teal-500 appearance-none focus:outline-none">
+                   <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                       <!-- <title>Menu</title> -->
+                       <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+                   </svg>
+               </button>
+           </div>
+
+           <div class="w-full  lg:flex  lg:items-center lg:w-auto hidden lg:block mt-2 lg:mt-0 bg-white lg:bg-transparent text-black p-4 lg:p-0 z-20  rounded-lg"
+               id="nav-content">
+               <ul class="w-full flex gap-2 my-auto  mx-12 md:flex-row flex-col text-xl md:items-center md:gap-[3vw]   ">
+                   <li>
+                       <a class="hover:text-gray-500" href="#">Home</a>
+                   </li>
+                   <li>
+                       <a class="hover:text-gray-500" href="#">Cursos</a>
+                   </li>
+                   <li>
+                       <a class="hover:text-gray-500" href="#">Blog</a>
+                   </li>
+
+
+                   <div class="flex items-center gap-6">
+                       <a href="" class="cursor-pointer" >
+                           <img src="{% static 'appsite/img/store-bag.png' %}" width="32" alt="">
+                       </a>
+
+                       <a href="" class="cursor-pointer" >
+                           <img src="{% static 'appsite/img/ava.png' %}" width="38" alt="">
+                       </a>
+
+                       <a href="" class="cursor-pointer" >
+                           <img src="{% static 'appsite/img/organização.png' %}" width="45" alt="">
+                       </a>
+<!-- 
+                       <a href="" class="cursor-pointer bg-[#ffffff] text-black px-5 py-2 border-2 rounded-lg hover:bg-[#93c2b1] hover:text-white">Empresas</a>
+                       
+                       <a class="bg-[#24c0eb] text-white px-5 py-2 border-2 rounded-lg hover:bg-[#f2cc49] font-bold ">AVA
+                       </a> -->
+                   </div>
+
+               </ul>
+
+           </div>
+       </div>
+
+       <hr class="border-b border-gray-100 opacity-25 my-0 py-0" />
    </nav>
 
-   <div class="icons">
-      <div id="account-btn" class="fas fa-user"></div>
-      <div id="menu-btn" class="fas fa-bars"></div>
+
+
+
+   <!--Hero-->
+   <div class="pt-24">
+
+       <div class="container px-3 mx-auto flex flex-wrap flex-col md:flex-row items-center">
+           <!--Left Col-->
+           <div class="flex flex-col w-full md:w-2/5 justify-center items-start text-center md:text-left">
+               <div>
+                   
+                   <h1 class="my-4 text-5xl font-bold leading-tight">Elevar Sua Carreira Nunca Foi Tão Fácil</h1>
+
+                   <p class="leading-normal text-2xl mb-8">Inscreva-se agora na nossa plataforma de cursos
+                       profissionalizantes online e tenha acesso a uma ampla variedade de cursos.
+                       Não perca mais tempo e comece a investir no seu futuro profissional hoje!
+                   </p>
+               </div>
+               <div class="flex items-center gap-6">
+                   <a href="#"
+                       class="cursor-pointer bg-[#ffffff] text-black px-5 py-2 border-2 rounded-full hover:bg-[#93c2b1] hover:text-white flex gap-2 items-center">
+                       <img src="{% static 'appsite/img/icons8-whatsapp-64.png' %}" width="30" alt="Logo whatsapp">
+                       Fale comosco
+                   </a>
+                   
+               </div>
+           </div>
+
+           <!--Right Col-->
+           <div class="w-full md:w-3/5 py-6 flex justify-center">
+               <img class="w-full md:w-4/5 " src="{% static 'appsite/img/undraw_adventure_map_hnin.svg' %}">
+           </div>
+
+       </div>
+       <!-- curva fundo banner -->
+       <div class="relative -mt-12 ">
+           <svg viewBox="0 0 1428 174" version="1.1" xmlns="http://www.w3.org/2000/svg"
+               xmlns:xlink="http://www.w3.org/1999/xlink">
+               <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                   <g transform="translate(-2.000000, 44.000000)" fill="#FFFFFF" fill-rule="nonzero">
+                       <path
+                           d="M0,0 C90.7283404,0.927527913 147.912752,27.187927 291.910178,59.9119003 C387.908462,81.7278826 543.605069,89.334785 759,82.7326078 C469.336065,156.254352 216.336065,153.6679 0,74.9732496"
+                           opacity="0.100000001"></path>
+                       <path
+                           d="M100,104.708498 C277.413333,72.2345949 426.147877,52.5246657 546.203633,45.5787101 C666.259389,38.6327546 810.524845,41.7979068 979,55.0741668 C931.069965,56.122511 810.303266,74.8455141 616.699903,111.243176 C423.096539,147.640838 250.863238,145.462612 100,104.708498 Z"
+                           opacity="0.100000001"></path>
+                       <path
+                           d="M1046,51.6521276 C1130.83045,29.328812 1279.08318,17.607883 1439,40.1656806 L1439,120 C1271.17211,77.9435312 1140.17211,55.1609071 1046,51.6521276 Z"
+                           id="Path-4" opacity="0.200000003"></path>
+                   </g>
+                   <g transform="translate(-4.000000, 76.000000)" fill="#FFFFFF" fill-rule="nonzero">
+                       <path
+                           d="M0.457,34.035 C57.086,53.198 98.208,65.809 123.822,71.865 C181.454,85.495 234.295,90.29 272.033,93.459 C311.355,96.759 396.635,95.801 461.025,91.663 C486.76,90.01 518.727,86.372 556.926,80.752 C595.747,74.596 622.372,70.008 636.799,66.991 C663.913,61.324 712.501,49.503 727.605,46.128 C780.47,34.317 818.839,22.532 856.324,15.904 C922.689,4.169 955.676,2.522 1011.185,0.432 C1060.705,1.477 1097.39,3.129 1121.236,5.387 C1161.703,9.219 1208.621,17.821 1235.4,22.304 C1285.855,30.748 1354.351,47.432 1440.886,72.354 L1441.191,104.352 L1.121,104.031 L0.457,34.035 Z">
+                       </path>
+                   </g>
+               </g>
+           </svg>
+       </div>
+
    </div>
 
-</header>
+   <!-- Destaque cursos -->
 
-<!-- account form section starts  -->
+   <section class="bg-white py-8">
+       <h1 class="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800">Curso em destaques</h1>
+           
 
-<div class="account-form">
+       <div class="container max-w-5xl mx-auto m-8 overflow-x-auto max-w-full">
+           
+           <!-- ✅ Grid Section - Starts Here 👇 -->
+           <section
+               class="w-fit mx-auto flex lg justify-items-center justify-center gap-y-20 gap-x-14 mt-10 mb-5  no-wrap ">
 
-   <div id="close-form" class="fas fa-times"></div>
+               <!--   ✅ Product NR-09 - Starts Here 👇 -->
+               <div class="w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl mx-8">
+                   <a href="#">
+                       <img src="{% static 'appsite/img/logo-nr09.png' %}" alt="Product" class="h-80 w-72 object-cover rounded-t-xl " />
+                       <div class="px-4 py-3 w-72">
+                           <span class="text-gray-400 mr-3 uppercase text-xs">Normas regulamentadoras</span>
+                           <p class="text-lg font-bold text-black truncate block capitalize">NR-09</p>
+                           <div class="flex items-center">
+                               <p class="text-lg font-semibold text-black cursor-auto my-3">Mais detalhes</p>
+                               <del>
+                                   <!-- <p class="text-sm text-gray-600 cursor-auto ml-2">$199</p> -->
+                               </del>
+                               <div class="ml-auto"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                       fill="currentColor" class="bi bi-bag-plus" viewBox="0 0 16 16">
+                                       <path fill-rule="evenodd"
+                                           d="M8 7.5a.5.5 0 0 1 .5.5v1.5H10a.5.5 0 0 1 0 1H8.5V12a.5.5 0 0 1-1 0v-1.5H6a.5.5 0 0 1 0-1h1.5V8a.5.5 0 0 1 .5-.5z" />
+                                       <path
+                                           d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z" />
+                                   </svg></div>
+                           </div>
+                       </div>
+                   </a>
+               </div>
+               <!--   🛑 Product NR-09- Ends Here  -->
 
-   <div class="buttons">
-      <span class="btn active login-btn">login</span>
-      <span class="btn register-btn">register</span>
-   </div>
+               <!--   ✅ Product NR-10 - Starts Here 👇 -->
+               <div class="w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl">
+                   <a href="#">
+                       <img src="{% static 'appsite/img/logo-nr10.png' %}" alt="Product" class="h-80 w-72 object-cover rounded-t-xl " />
+                       <div class="px-4 py-3 w-72">
+                           <span class="text-gray-400 mr-3 uppercase text-xs">Normas regulamentadoras</span>
+                           <p class="text-lg font-bold text-black truncate block capitalize">NR-10</p>
+                           <div class="flex items-center">
+                               <p class="text-lg font-semibold text-black cursor-auto my-3">Mais detalhes</p>
+                               <del>
+                                   <!-- <p class="text-sm text-gray-600 cursor-auto ml-2">$199</p> -->
+                               </del>
+                               <div class="ml-auto"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                       fill="currentColor" class="bi bi-bag-plus" viewBox="0 0 16 16">
+                                       <path fill-rule="evenodd"
+                                           d="M8 7.5a.5.5 0 0 1 .5.5v1.5H10a.5.5 0 0 1 0 1H8.5V12a.5.5 0 0 1-1 0v-1.5H6a.5.5 0 0 1 0-1h1.5V8a.5.5 0 0 1 .5-.5z" />
+                                       <path
+                                           d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z" />
+                                   </svg></div>
+                           </div>
+                       </div>
+                   </a>
+               </div>
+               <!--   🛑 Product NR-10 - Ends Here  -->
 
-   <form class="login-form active" action="">
-      <h3>login now</h3>
-      <input type="email" placeholder="enter your email" class="box">
-      <input type="password" placeholder="enter your password" class="box">
-      <div class="flex">
-         <input type="checkbox" name="" id="remember-me">
-         <label for="remember-me">remember me</label>
-         <a href="#">forgot password?</a>
-      </div>
-      <input type="submit" value="login now" class="btn">
-   </form>
+               <!--   ✅ Product NR-35 - Starts Here 👇 -->
+               <div class="w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl">
+                   <a href="#">
+                       <img src="{% static 'appsite/img/logo-nr35.png' %}" alt="Product" class="h-80 w-72 object-cover rounded-t-xl " />
+                       <div class="px-4 py-3 w-72">
+                           <span class="text-gray-400 mr-3 uppercase text-xs">Normas regulamentadoras</span>
+                           <p class="text-lg font-bold text-black truncate block capitalize">NR-35</p>
+                           <div class="flex items-center">
+                               <p class="text-lg font-semibold text-black cursor-auto my-3">Mais detalhes</p>
+                               <del>
+                                   <!-- <p class="text-sm text-gray-600 cursor-auto ml-2">$199</p> -->
+                               </del>
+                               <div class="ml-auto"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                       fill="currentColor" class="bi bi-bag-plus" viewBox="0 0 16 16">
+                                       <path fill-rule="evenodd"
+                                           d="M8 7.5a.5.5 0 0 1 .5.5v1.5H10a.5.5 0 0 1 0 1H8.5V12a.5.5 0 0 1-1 0v-1.5H6a.5.5 0 0 1 0-1h1.5V8a.5.5 0 0 1 .5-.5z" />
+                                       <path
+                                           d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z" />
+                                   </svg></div>
+                           </div>
+                       </div>
+                   </a>
+               </div>
+               <!--   🛑 Product NR-35 - Ends Here  -->
 
-   <form class="register-form" action="">
-      <h3>register now</h3>
-      <input type="email" placeholder="enter your email" class="box">
-      <input type="password" placeholder="enter your password" class="box">
-      <input type="password" placeholder="confirm your password" class="box">
-      <input type="submit" value="register now" class="btn">
-   </form>
+           </section>
 
-</div>
+       </div>
+   </section>
 
-<!-- account form section ends -->
-
-<!-- header section ends -->
-
-<!-- home section starts  -->
-
-<section class="home">
-
-   <div class="swiper home-slider">
-      
-      <div class="swiper-wrapper">
-
-         <section class="swiper-slide slide" style="background:  url({% static 'appsite/img/home-slide-2.jpg' %}) no-repeat;">
-            <div class="content">
-               <h3>Elevar sua carreira nunca foi tão fácil!</h3>
-               <p> Inscreva-se agora na nossa plataforma de cursos profissionalizantes online e tenha acesso a uma ampla variedade de cursos. <br> Não perca mais tempo e comece a investir no seu futuro profissional hoje!"</p>
-               <!-- <a href="#" class="btn">get started</a> -->
-            </div>
-         </section>
-
+   
+   
+   <!-- FAQ -->
+   <section class="w-full bg-white  py-12">
+       <div class="container space-y-4 mx-auto ">
+           <h2 class="text-2xl font-bold">Perguntas frequentes:</h2>
+           <details class="group [&_summary::-webkit-details-marker]:hidden" open>
+             <summary
+               class="flex items-center justify-between p-4 rounded-lg cursor-pointer bg-gray-50"
+             >
+               <h2 class="font-medium text-gray-900">
+                   O que é estudar online?
+               </h2>
+               <svg
+                 class="ml-1.5 h-5 w-5 flex-shrink-0 transition duration-300 group-open:-rotate-180"
+                 xmlns="http://www.w3.org/2000/svg"
+                 fill="none"
+                 viewBox="0 0 24 24"
+                 stroke="currentColor"
+               >
+                 <path
+                   stroke-linecap="round"
+                   stroke-linejoin="round"
+                   stroke-width="2"
+                   d="M19 9l-7 7-7-7"
+                 />
+               </svg>
+             </summary>
          
+             <p class="px-4 mt-4 leading-relaxed text-gray-700">
+               Estudar online é a modalidade de ensino que permite que os alunos acessem cursos, aulas e materiais de estudo através da internet. Isso permite aos alunos estudar de qualquer lugar e a qualquer hora, desde que tenham acesso à internet.
+             </p>
+           </details>
+         
+           <details class="group [&_summary::-webkit-details-marker]:hidden">
+             <summary
+               class="flex items-center justify-between p-4 rounded-lg cursor-pointer bg-gray-50"
+             >
+               <h2 class="font-medium text-gray-900">
+                   Quais são as vantagens de estudar online?
+               </h2>
+         
+               <svg
+                 class="ml-1.5 h-5 w-5 flex-shrink-0 transition duration-300 group-open:-rotate-180"
+                 xmlns="http://www.w3.org/2000/svg"
+                 fill="none"
+                 viewBox="0 0 24 24"
+                 stroke="currentColor"
+               >
+                 <path
+                   stroke-linecap="round"
+                   stroke-linejoin="round"
+                   stroke-width="2"
+                   d="M19 9l-7 7-7-7"
+                 />
+               </svg>
+             </summary>
+         
+             <p class="px-4 mt-4 leading-relaxed text-gray-700">
+               As vantagens de estudar online incluem flexibilidade de horários, acesso a cursos de todo o mundo, economia de tempo e dinheiro, e a possibilidade de estudar no próprio ritmo.
+             </p>
+           </details>
 
-      </div>
+           <details class="group [&_summary::-webkit-details-marker]:hidden">
+               <summary
+                 class="flex items-center justify-between p-4 rounded-lg cursor-pointer bg-gray-50"
+               >
+                 <h2 class="font-medium text-gray-900">
+                   Quais são os requisitos para estudar online?
+                 </h2>
+           
+                 <svg
+                   class="ml-1.5 h-5 w-5 flex-shrink-0 transition duration-300 group-open:-rotate-180"
+                   xmlns="http://www.w3.org/2000/svg"
+                   fill="none"
+                   viewBox="0 0 24 24"
+                   stroke="currentColor"
+                 >
+                   <path
+                     stroke-linecap="round"
+                     stroke-linejoin="round"
+                     stroke-width="2"
+                     d="M19 9l-7 7-7-7"
+                   />
+                 </svg>
+               </summary>
+           
+               <p class="px-4 mt-4 leading-relaxed text-gray-700">
+                   Os requisitos para estudar online geralmente incluem um computador ou dispositivo móvel com acesso à internet, habilidades básicas de informática e a capacidade de seguir instruções online. Alguns cursos também podem exigir certos softwares ou equipamentos específicos.
+               </p>
+           </details>
+         
+           <details class="group [&_summary::-webkit-details-marker]:hidden">
+               <summary
+                 class="flex items-center justify-between p-4 rounded-lg cursor-pointer bg-gray-50"
+               >
+                 <h2 class="font-medium text-gray-900">
+                   Como os cursos online são avaliados?
+                 </h2>
+           
+                 <svg
+                   class="ml-1.5 h-5 w-5 flex-shrink-0 transition duration-300 group-open:-rotate-180"
+                   xmlns="http://www.w3.org/2000/svg"
+                   fill="none"
+                   viewBox="0 0 24 24"
+                   stroke="currentColor"
+                 >
+                   <path
+                     stroke-linecap="round"
+                     stroke-linejoin="round"
+                     stroke-width="2"
+                     d="M19 9l-7 7-7-7"
+                   />
+                 </svg>
+               </summary>
+           
+               <p class="px-4 mt-4 leading-relaxed text-gray-700">
+                   Os cursos online geralmente são avaliados com base em testes, trabalhos escritos e projetos. Alguns cursos também podem incluir avaliações orais ou de desempenho prático. Os alunos geralmente recebem notas finais, que podem ser usadas para obter créditos universitários ou outros tipos de certificações.
+               </p>
+           </details>
 
-      <div class="swiper-pagination"></div>
+           <details class="group [&_summary::-webkit-details-marker]:hidden">
+               <summary
+                 class="flex items-center justify-between p-4 rounded-lg cursor-pointer bg-gray-50"
+               >
+                 <h2 class="font-medium text-gray-900">
+                   Como posso me manter motivado durante o curso online?
+                 </h2>
+           
+                 <svg
+                   class="ml-1.5 h-5 w-5 flex-shrink-0 transition duration-300 group-open:-rotate-180"
+                   xmlns="http://www.w3.org/2000/svg"
+                   fill="none"
+                   viewBox="0 0 24 24"
+                   stroke="currentColor"
+                 >
+                   <path
+                     stroke-linecap="round"
+                     stroke-linejoin="round"
+                     stroke-width="2"
+                     d="M19 9l-7 7-7-7"
+                   />
+                 </svg>
+               </summary>
+           
+               <p class="px-4 mt-4 leading-relaxed text-gray-700">
+                   A motivação pode ser um desafio quando se estuda online, mas existem várias maneiras de se manter motivado. Algumas dicas incluem estabelecer metas, manter um horário de estudo regular, participar de fóruns de discussão e grupos de estudo, e encontrar um parceiro de estudo.
+               </p>
+           </details>
 
-   </div>
+           <details class="group [&_summary::-webkit-details-marker]:hidden">
+               <summary
+                 class="flex items-center justify-between p-4 rounded-lg cursor-pointer bg-gray-50"
+               >
+                 <h2 class="font-medium text-gray-900">
+                   Posso acessar meus cursos a qualquer momento?
+                 </h2>
+           
+                 <svg
+                   class="ml-1.5 h-5 w-5 flex-shrink-0 transition duration-300 group-open:-rotate-180"
+                   xmlns="http://www.w3.org/2000/svg"
+                   fill="none"
+                   viewBox="0 0 24 24"
+                   stroke="currentColor"
+                 >
+                   <path
+                     stroke-linecap="round"
+                     stroke-linejoin="round"
+                     stroke-width="2"
+                     d="M19 9l-7 7-7-7"
+                   />
+                 </svg>
+               </summary>
+           
+               <p class="px-4 mt-4 leading-relaxed text-gray-700">
+                   Sim, você pode acessar seus cursos a qualquer momento, pois eles estarão disponíveis online 24 horas por dia, 7 dias por semana. Isso permite que você estude no seu próprio ritmo e de acordo com sua agenda.
+               </p>
+           </details>
 
-</section>
-
-<!-- Section-card-cursos -->
-
-
-<section class="courses">
-
-   <h1 class="heading"> Nossos curso em destaque </h1>
-
-   <div class="box-container">
-
-      <div class="box">
-         <div class="image">
-            <img src="{% static 'appsite/img/course-2-1.jpg' %}" alt="">
-            <h3>development</h3>
+       </div>
+         
+   </section>
+     
+   
+   <section>
+       <div class="px-4 py-12 mx-auto max-w-7xl sm:px-6 md:px-12 lg:px-24 lg:py-24">
+         <div class="flex flex-wrap items-center mx-auto max-w-7xl">
+           <div class="w-full lg:max-w-lg lg:w-1/2 rounded-xl">
+             <div>
+               <div class="relative w-full max-w-lg">
+                 <div class="absolute top-0 rounded-full bg-violet-300 -left-4 w-72 h-72 mix-blend-multiply filter blur-xl opacity-70 animate-blob"></div>
+     
+                 <div class="absolute rounded-full bg-fuchsia-300 -bottom-24 right-20 w-72 h-72 mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-4000"></div>
+                 <div class="relative">
+                   <img class="object-cover object-center mx-auto rounded-lg shadow-2xl" alt="hero" src="https://images.unsplash.com/photo-1621274790572-7c32596bc67f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=654&q=80">
+                 </div>
+               </div>
+             </div>
+           </div>
+           <div class="flex flex-col items-start mt-12 mb-16 text-left lg:flex-grow lg:w-1/2 lg:pl-6 xl:pl-24 md:mb-0 xl:mt-0">
+             <!-- <span class="mb-8 text-xs font-bold tracking-widest text-blue-600 uppercase"> Your tagline </span> -->
+             <h1 class="mb-8 text-4xl font-bold leading-none tracking-tighter text-neutral-600 md:text-7xl lg:text-5xl">Transforme sua carreira com a educação online.</h1>
+             
+               <div class="prose prose-md">
+                 <h3 class="text-2xl">"A educação é a arma mais poderosa que você pode usar para mudar o mundo." - Nelson Mandela</h3>
+               </div>
+             </div>
+           </div>
          </div>
-         <div class="content">
-            <h3>choose what's best for you!</h3>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque, odit!</p>
-            <a href="#" class="btn">read more</a>
-            <div class="icons">
-               <span> <i class="fas fa-book"></i> 12 modules </span>
-               <span> <i class="fas fa-clock"></i> 6 hours </span>
-            </div>
-         </div>
-      </div>
-
-      <div class="box">
-         <div class="image">
-            <img src="{% static 'appsite/img/course-2-2.jpg' %}" alt="">
-            <h3>engineering</h3>
-         </div>
-         <div class="content">
-            <h3>choose what's best for you!</h3>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque, odit!</p>
-            <a href="#" class="btn">read more</a>
-            <div class="icons">
-               <span> <i class="fas fa-book"></i> 12 modules </span>
-               <span> <i class="fas fa-clock"></i> 6 hours </span>
-            </div>
-         </div>
-      </div>
-
-      <div class="box">
-         <div class="image">
-            <img src="{% static 'appsite/img/course-2-3.jpg' %}" alt="">
-            <h3>mathemetics</h3>
-         </div>
-         <div class="content">
-            <h3>choose what's best for you!</h3>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque, odit!</p>
-            <a href="#" class="btn">read more</a>
-            <div class="icons">
-               <span> <i class="fas fa-book"></i> 12 modules </span>
-               <span> <i class="fas fa-clock"></i> 6 hours </span>
-            </div>
-         </div>
-      </div>
-
-      <div class="box">
-         <div class="image">
-            <img src="{% static 'appsite/img/course-2-4.jpg' %}" alt="">
-            <h3>doctor</h3>
-         </div>
-         <div class="content">
-            <h3>choose what's best for you!</h3>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque, odit!</p>
-            <a href="#" class="btn">read more</a>
-            <div class="icons">
-               <span> <i class="fas fa-book"></i> 12 modules </span>
-               <span> <i class="fas fa-clock"></i> 6 hours </span>
-            </div>
-         </div>
-      </div>
-
-      <div class="box">
-         <div class="image">
-            <img src="{% static 'appsite/img/course-2-5.jpg' %}" alt="">
-            <h3>science</h3>
-         </div>
-         <div class="content">
-            <h3>choose what's best for you!</h3>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque, odit!</p>
-            <a href="#" class="btn">read more</a>
-            <div class="icons">
-               <span> <i class="fas fa-book"></i> 12 modules </span>
-               <span> <i class="fas fa-clock"></i> 6 hours </span>
-            </div>
-         </div>
-      </div>
-
-      <div class="box">
-         <div class="image">
-            <img src="{% static 'appsite/img/course-2-6.jpg' %}" alt="">
-            <h3>business</h3>
-         </div>
-         <div class="content">
-            <h3>choose what's best for you!</h3>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque, odit!</p>
-            <a href="#" class="btn">read more</a>
-            <div class="icons">
-               <span> <i class="fas fa-book"></i> 12 modules </span>
-               <span> <i class="fas fa-clock"></i> 6 hours </span>
-            </div>
-         </div>
-      </div>
-
-      <div class="box hide">
-         <div class="image">
-            <img src="{% static 'appsite/img/course-2-7.jpg' %}" alt="">
-            <h3>teaching</h3>
-         </div>
-         <div class="content">
-            <h3>choose what's best for you!</h3>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque, odit!</p>
-            <a href="#" class="btn">read more</a>
-            <div class="icons">
-               <span> <i class="fas fa-book"></i> 12 modules </span>
-               <span> <i class="fas fa-clock"></i> 6 hours </span>
-            </div>
-         </div>
-      </div>
-
-      <div class="box hide">
-         <div class="image">
-            <img src="{% static 'appsite/img/course-2-8.jpg' %}" alt="">
-            <h3>designing</h3>
-         </div>
-         <div class="content">
-            <h3>choose what's best for you!</h3>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque, odit!</p>
-            <a href="#" class="btn">read more</a>
-            <div class="icons">
-               <span> <i class="fas fa-book"></i> 12 modules </span>
-               <span> <i class="fas fa-clock"></i> 6 hours </span>
-            </div>
-         </div>
-      </div>
-
-      <div class="box hide">
-         <div class="image">
-            <img src="{% static 'appsite/img/course-2-9.jpg' %}" alt="">
-            <h3>dancing</h3>
-         </div>
-         <div class="content">
-            <h3>choose what's best for you!</h3>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque, odit!</p>
-            <a href="#" class="btn">read more</a>
-            <div class="icons">
-               <span> <i class="fas fa-book"></i> 12 modules </span>
-               <span> <i class="fas fa-clock"></i> 6 hours </span>
-            </div>
-         </div>
-      </div>
-
-   </div>
-
-   <div class="load-more"> <div class="btn">Ver mais</div> </div>
-
-</section>
+       </div>
+   </section>
 
 
 
+   <!--Footer-->
+   <footer class="bg-black">
+       <div class="container mx-auto  px-8">
 
+           <div class="pl-4 grid grid-cols-1 lg:grid-cols-3  justify-between  items-center  py-4">
+               <a class="font-bold text-2xl lg:text-4xl text-white" href="#">
+                   uniutec
+               </a>
+               <p class="text-white">CNPJ: 04.249.121/001-22</p>
 
+               <p class="text-white">Desenvolvido por Criativo T.I | © 2023, Inc.</p>
 
+           </div>
 
+       </div>
 
-<!-- footer section starts  -->
+   </footer>
 
-<section class="footer">
-
-   <div class="box-container">
-
-      <div class="box">
-         <h3>
-             UNIUTEC
-         </h3>
-         <p>A educação é a chave para abrir as portas do futuro e alcançar o sucesso.</p>
-         <div class="share">
-            <a href="#" class="fab fa-facebook-f"></a>
-            <a href="#" class="fab fa-twitter"></a>
-            <a href="#" class="fab fa-instagram"></a>
-            <a href="#" class="fab fa-linkedin"></a>
-         </div>
-      </div>
-
-      <!-- <div class="box">
-         <h3>quick links</h3>
-         <a href="home.html" class="link">home</a>
-         <a href="about.html" class="link">about</a>
-         <a href="courses.html" class="link">courses</a>
-         <a href="contact.html" class="link">contact</a>
-      </div> -->
-
-      <!-- <div class="box">
-         <h3>useful links</h3>
-         <a href="#" class="link">help center</a>
-         <a href="#" class="link">ask questions</a>
-         <a href="#" class="link">send feedback</a>
-         <a href="#" class="link">private policy</a>
-         <a href="#" class="link">terms of use</a>
-      </div> -->
-   </div>
-
-   <div class="credit"> Criado por <span>Criativo T.I</span> | Todos os direitos reservados! </div>
-
-</section>
-
-<!-- footer section ends -->
-
-
-
-
-
-
-
-<!-- swiper js link  -->
-<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
-
-<!-- custom js file link  -->
-<script src="js/script.js"></script>
-
+   <script src="main.js"></script>
+   <script src="cards.js"></script>
 </body>
+
 </html>
